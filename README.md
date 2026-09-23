@@ -21,6 +21,4 @@ node scripts/actualizar_series.mjs
 ```
 
 ## Fuentes
-
-- Gasolina: histórico del MEM publicado por `peterargueta/Precios_combustibles_GT`.
 - Petróleo: serie diaria WTI RWTC de EIA.
