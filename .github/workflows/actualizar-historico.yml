@@ -1,0 +1,36 @@
+name: Actualizar histórico de combustibles
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 8 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Descargar y procesar las series
+        run: node scripts/actualizar_series.mjs
+
+      - name: Registrar cambios de datos
+        run: |
+          if git diff --quiet -- data/series_combustibles.json; then
+            echo "No hay datos nuevos."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/series_combustibles.json
+          git commit -m "chore: actualizar histórico de combustibles"
+          git push

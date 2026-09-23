@@ -1,0 +1,61 @@
+<section class="observatorio" aria-labelledby="titulo_observatorio">
+    <input type="hidden" id="jsid" value="precios_combustibles">
+    <input type="hidden" id="series_combustibles" value="">
+
+    <div class="encabezado-observatorio">
+        <div>
+            <p class="eyebrow">Guatemala · precios promedio nacionales</p>
+            <h1 id="titulo_observatorio">¿La gasolina sube por el petróleo?</h1>
+            <p class="introduccion">Compare el precio histórico de la gasolina con el WTI y aísle el efecto de IVA e IDP.</p>
+        </div>
+        <div class="estado-datos" id="estado_datos">Conectando con las fuentes…</div>
+    </div>
+
+    <section class="controles" aria-label="Controles de la gráfica">
+        <label>Gasolina
+            <select id="combustible">
+                <option value="Superior">Superior</option>
+                <option value="Regular">Regular</option>
+            </select>
+        </label>
+        <label>Período
+            <select id="periodo">
+                <option value="365">Último año</option>
+                <option value="1095">Últimos 3 años</option>
+                <option value="0">Todo el histórico</option>
+            </select>
+        </label>
+        <label>Desfase petróleo → gasolina
+            <select id="desfase">
+                <option value="0">Sin desfase</option>
+                <option value="7">7 días</option>
+                <option value="14">14 días</option>
+                <option value="21">21 días</option>
+            </select>
+        </label>
+    </section>
+
+    <section class="indicadores" aria-label="Indicadores del período">
+        <article><span>Variación gasolina</span><strong id="variacion_gasolina">—</strong><small id="rango_gasolina">—</small></article>
+        <article><span>Variación WTI</span><strong id="variacion_petroleo">—</strong><small>USD por barril</small></article>
+        <article><span>Correlación</span><strong id="correlacion">—</strong><small id="texto_correlacion">—</small></article>
+        <article><span>Ahorro fiscal estimado</span><strong id="ahorro_impuesto">—</strong><small>por galón, último dato</small></article>
+    </section>
+
+    <section class="panel-grafica" aria-labelledby="titulo_grafica_total">
+        <div class="titulo-panel"><div><p class="eyebrow">Precio final al consumidor</p><h2 id="titulo_grafica_total">Gasolina y petróleo</h2></div><span class="leyenda">Escalas normalizadas (inicio = 100)</span></div>
+        <div class="contenedor-canvas"><canvas id="grafica_total"></canvas></div>
+        <p class="nota-grafica">La normalización permite comparar la dirección y magnitud de las variaciones aunque las unidades sean distintas: quetzales/galón vs. USD/barril.</p>
+    </section>
+
+    <section class="panel-grafica" aria-labelledby="titulo_grafica_neta">
+        <div class="titulo-panel"><div><p class="eyebrow">Escenario sin impuestos</p><h2 id="titulo_grafica_neta">Gasolina sin IVA ni IDP y petróleo</h2></div><span class="leyenda">Escalas normalizadas (inicio = 100)</span></div>
+        <div class="contenedor-canvas"><canvas id="grafica_sin_impuestos"></canvas></div>
+        <p class="nota-grafica">Gasolina sin impuestos = precio publicado − IDP − IVA. El IVA se despeja al 12% sobre el precio antes de IVA y sin IDP.</p>
+    </section>
+
+    <section class="metodologia">
+        <div><h2>Cómo leer el resultado</h2><p>Una correlación cercana a 1 indica que ambas series se mueven juntas; cercana a 0 señala una relación lineal débil. No demuestra causalidad: el precio local también responde a derivados refinados, tipo de cambio, fletes, inventarios y márgenes.</p></div>
+        <div><h2>Fuentes y cálculo</h2><p>Gasolina: histórico del MEM procesado por el proyecto de referencia. Petróleo: WTI diario de EIA. IDP: Q4.70 superior / Q4.60 regular por galón. IVA: 12% incluido, calculado como <code>(precio − IDP) × 12 / 112</code>.</p></div>
+    </section>
+</section>

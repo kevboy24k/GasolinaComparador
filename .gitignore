@@ -1,0 +1,3 @@
+/Intranet/data/*.json
+/Intranet/data/*.log
+!/Intranet/data/.gitkeep
