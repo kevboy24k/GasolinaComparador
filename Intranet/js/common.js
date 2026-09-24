@@ -47,8 +47,22 @@ function download_div_content(fields, table, operation, destiny, callback = null
     }, callback_error);
 }
 
+function registrar_vista_analytics(opcion) {
+    if (typeof window.gtag !== 'function' || !opcion) return;
+
+    const nombre_opcion = String(opcion).replace(/[^a-zA-Z0-9_-]/g, '');
+    if (!nombre_opcion) return;
+
+    window.gtag('event', 'page_view', {
+        page_title: document.title + ' - ' + nombre_opcion.replace(/_/g, ' '),
+        page_location: window.location.origin + window.location.pathname + '#' + nombre_opcion,
+        page_path: window.location.pathname + '#' + nombre_opcion
+    });
+}
+
 function mostrar_opcion(opcion) {
     download_div_content('', opcion, 'cargar_opcion', 'contenido_principal', function () {
+        registrar_vista_analytics(opcion);
         const jsid = document.getElementById('jsid');
         if (!jsid || !jsid.value) return;
         const script = document.createElement('script');

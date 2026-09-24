@@ -7,6 +7,14 @@
     <title>Observatorio de Combustibles</title>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="Intranet/css/combustibles.css">
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TB6TV2EF0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7TB6TV2EF0', { send_page_view: false });
+    </script>
 </head>
 <body>
     <header class="barra-principal">
