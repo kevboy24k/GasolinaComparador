@@ -3,7 +3,12 @@ name: Actualizar histórico de combustibles
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 8 * * *'
+    # Horario posterior a la ventana habitual de publicación del MEM.
+    - cron: '17 22 * * *'
+
+concurrency:
+  group: actualizar-historico
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -11,6 +16,7 @@ permissions:
 jobs:
   actualizar:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Obtener repositorio
         uses: actions/checkout@v4
@@ -21,7 +27,12 @@ jobs:
           node-version: '20'
 
       - name: Descargar y procesar las series
-        run: node scripts/actualizar_series.mjs
+        env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+          MEM_PROXY_URL: ${{ secrets.MEM_PROXY_URL }}
+        run: |
+          node scripts/tests/mem_parser.test.mjs
+          node scripts/actualizar_series.mjs
 
       - name: Registrar cambios de datos
         run: |

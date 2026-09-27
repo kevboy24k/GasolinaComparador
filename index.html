@@ -27,7 +27,7 @@
             <div>
                 <p class="eyebrow">Guatemala · precios promedio nacionales</p>
                 <h1 id="titulo_observatorio">¿La gasolina sube por el petróleo?</h1>
-                <p class="introduccion">Compare el precio histórico de la gasolina con el WTI y aísle el efecto de IVA e IDP.</p>
+                <p class="introduccion">Compare datos oficiales, conozca qué integra el precio y fiscalice sus cambios sin confundir una estimación con evidencia de abuso.</p>
             </div>
             <div class="estado-datos" id="estado_datos">Cargando histórico…</div>
         </div>
@@ -69,6 +69,14 @@
             <p class="nota-grafica">La normalización permite comparar la dirección y magnitud de las variaciones aunque las unidades sean distintas: quetzales/galón vs. USD/barril.</p>
         </section>
 
+        <section class="panel-grafica" aria-labelledby="titulo_grafica_estructura">
+            <div class="titulo-panel"><div><p class="eyebrow">Estimación proporcional · Ciudad de Guatemala</p><h2 id="titulo_grafica_estructura">Estructura estimada del precio actual</h2></div><span class="leyenda" id="vigencia_estructura" role="status" aria-live="polite">Calculando con la estructura del MEM…</span></div>
+            <div class="contenedor-canvas contenedor-canvas-estructura"><canvas id="grafica_estructura" role="img" aria-describedby="nota_estructura"></canvas></div>
+            <div class="tabla-contenedor"><table class="tabla-estructura"><thead><tr><th>Componente</th><th>Participación base</th><th>Estimado actual</th></tr></thead><tbody id="tabla_estructura"></tbody><tfoot><tr><th>Precio observado actual</th><th>100%</th><th id="total_estructura">—</th></tr></tfoot></table></div>
+            <p class="nota-grafica" id="nota_estructura">Estimación orientativa: distribuye el último precio observado usando las participaciones de la última estructura oficial validada. No representa un desglose contable vigente ni demuestra por sí sola sobreprecio, abuso o fraude.</p>
+            <a class="enlace-fuente" id="fuente_estructura" href="https://mem.gob.gt/que-hacemos/hidrocarburos/comercializacion-downstream/precios-combustible-nacionales/" target="_blank" rel="noopener noreferrer">Consultar documento oficial del MEM</a>
+        </section>
+
         <section class="panel-grafica" aria-labelledby="titulo_grafica_neta">
             <div class="titulo-panel"><div><p class="eyebrow">Escenario sin impuestos</p><h2 id="titulo_grafica_neta">Gasolina sin IVA ni IDP y petróleo</h2></div><span class="leyenda">Escalas normalizadas (inicio = 100)</span></div>
             <div class="contenedor-canvas"><canvas id="grafica_sin_impuestos"></canvas></div>
@@ -76,8 +84,8 @@
         </section>
 
         <section class="metodologia">
-            <div><h2>Cómo leer el resultado</h2><p>Una correlación cercana a 1 indica que ambas series se mueven juntas; cercana a 0 señala una relación lineal débil. No demuestra causalidad: el precio local también responde a derivados refinados, tipo de cambio, fletes, inventarios y márgenes.</p></div>
-            <div><h2>Fuentes y cálculo</h2><p>Gasolina: histórico del MEM procesado por el proyecto de referencia. Petróleo: WTI diario de EIA. IDP: Q4.70 superior / Q4.60 regular por galón. IVA: 12% incluido, calculado como <code>(precio − IDP) × 12 / 112</code>.</p></div>
+            <div><h2>Cómo leer el resultado</h2><p>Una correlación cercana a 1 indica que ambas series se mueven juntas; cercana a 0 señala una relación lineal débil. No demuestra causalidad ni fraude: el precio local también responde a derivados refinados, tipo de cambio, fletes, inventarios, impuestos y márgenes.</p></div>
+            <div><h2>Fuentes y cálculo</h2><p>Gasolina y estructura: publicaciones oficiales del MEM consultadas directamente por este proyecto. Petróleo: WTI diario de EIA. Tipo de cambio: Banco de Guatemala. El sitio diferencia datos oficiales de cálculos propios y conserva la fecha de vigencia de cada fuente.</p></div>
         </section>
     </main>
 

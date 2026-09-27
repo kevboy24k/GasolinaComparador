@@ -1,0 +1,36 @@
+{
+  "vigente_desde": "2026-03-12",
+  "vigente_hasta": "2026-03-15",
+  "area": "Ciudad de Guatemala",
+  "modalidad": "Autoservicio",
+  "unidad": "GTQ/galon",
+  "fuente": "Ministerio de Energía y Minas de Guatemala",
+  "fuente_url": "https://mem.gob.gt/wp-content/uploads/2026/03/Estructura-Porcentual-de-Precios-2026-03-12.pdf",
+  "combustibles": {
+    "Superior": {
+      "componentes": [
+        { "id": "cif", "nombre": "Precio CIF", "valor": 21.62 },
+        { "id": "puerto_terminal", "nombre": "Puerto y terminal", "valor": 0.30 },
+        { "id": "margen_importador", "nombre": "Margen importador", "valor": 2.00 },
+        { "id": "idp", "nombre": "IDP", "valor": 4.70 },
+        { "id": "iva", "nombre": "IVA", "valor": 3.14 },
+        { "id": "flete_terrestre", "nombre": "Flete terrestre", "valor": 0.40 },
+        { "id": "margen_expendedor", "nombre": "Margen expendedor", "valor": 1.832 }
+      ],
+      "total": 33.99
+    },
+    "Regular": {
+      "componentes": [
+        { "id": "cif", "nombre": "Precio CIF", "valor": 20.82 },
+        { "id": "puerto_terminal", "nombre": "Puerto y terminal", "valor": 0.30 },
+        { "id": "margen_importador", "nombre": "Margen importador", "valor": 2.00 },
+        { "id": "idp", "nombre": "IDP", "valor": 4.60 },
+        { "id": "iva", "nombre": "IVA", "valor": 3.04 },
+        { "id": "flete_terrestre", "nombre": "Flete terrestre", "valor": 0.40 },
+        { "id": "margen_expendedor", "nombre": "Margen expendedor", "valor": 1.832 }
+      ],
+      "total": 32.99
+    }
+  }
+}
+
