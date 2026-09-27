@@ -1,5 +1,8 @@
 import assert from 'node:assert/strict';
-import { extraerPreciosMem } from '../fuentes/mem.mjs';
+import { mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { extraerPreciosMem, obtenerGasolinasMem } from '../fuentes/mem.mjs';
 
 const htmlActual = `
 <h4>Modalidad: autoservicio</h4>
@@ -28,6 +31,23 @@ const htmlAnterior = `
 const anterior = extraerPreciosMem(htmlAnterior);
 assert.equal(anterior.fecha, '2024-11-04');
 assert.deepEqual(anterior.precios, { Superior: 29, Regular: 27.49 });
+
+const directorioTemporal = await mkdtemp(join(tmpdir(), 'gasolina-mem-'));
+const archivoTemporal = join(directorioTemporal, 'precios-mem.html');
+const consoleLogOriginal = console.log;
+try {
+    await writeFile(archivoTemporal, htmlActual, 'utf8');
+    process.env.MEM_HTML_FILE = archivoTemporal;
+    console.log = function () {};
+    const seriesManuales = await obtenerGasolinasMem();
+    assert.equal(seriesManuales.Superior[0].fecha, '2026-09-21');
+    assert.equal(seriesManuales.Superior[0].precio, 44.61);
+    assert.equal(seriesManuales.Regular[0].precio, 42.58);
+} finally {
+    console.log = consoleLogOriginal;
+    delete process.env.MEM_HTML_FILE;
+    await rm(directorioTemporal, { recursive: true, force: true });
+}
 
 console.log('Parser MEM: pruebas superadas.');
 

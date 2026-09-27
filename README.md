@@ -28,6 +28,19 @@ npx wrangler deploy --config cloudflare/wrangler.toml
 
 El proxy incluido solo admite HTTPS hacia dominios del MEM. Si Cloudflare también desafía la salida del Worker, utilice un runner autoalojado o un collector propio con navegador y caché; el workflow seguirá actualizando WTI y tipo de cambio sin borrar el último precio válido de gasolina.
 
+### Actualización manual cuando Cloudflare bloquea el acceso
+
+Abra en Chrome la página oficial de precios del MEM, complete la verificación de seguridad y guarde la página como HTML. Luego indique la ruta del archivo en PowerShell y ejecute el mismo actualizador:
+
+```powershell
+$env:MEM_HTML_FILE = "C:\ruta\al\archivo\precios-mem.html"
+node scripts/tests/mem_parser.test.mjs
+node scripts/actualizar_series.mjs
+Remove-Item Env:MEM_HTML_FILE
+```
+
+El archivo se procesa con el mismo parser y validaciones que la consulta automática. El actualizador mezcla la observación oficial con el histórico existente y no reemplaza fechas más recientes por datos anteriores.
+
 Para actualizarlo localmente, se necesita Node.js 20 o posterior:
 
 ```sh

@@ -1,3 +1,5 @@
+import { readFile } from 'node:fs/promises';
+
 const URL_API_MEM = 'https://mem.gob.gt/wp-json/wp/v2/pages/45428';
 const URL_PAGINA_MEM = 'https://mem.gob.gt/que-hacemos/hidrocarburos/comercializacion-downstream/precios-combustible-nacionales/';
 const MESES = {
@@ -176,7 +178,28 @@ function crearDato(fecha, precio, combustible, tipoCambio) {
     };
 }
 
+function crearSeries(dato) {
+    return {
+        Superior: [crearDato(dato.fecha, dato.precios.Superior, 'Superior', dato.tipo_cambio)],
+        Regular: [crearDato(dato.fecha, dato.precios.Regular, 'Regular', dato.tipo_cambio)]
+    };
+}
+
 export async function obtenerGasolinasMem() {
+    const archivoHtml = process.env.MEM_HTML_FILE?.trim() || '';
+    if (archivoHtml) {
+        try {
+            const dato = extraerPreciosMem(await readFile(archivoHtml, 'utf8'));
+            console.log(`MEM cargado desde archivo oficial guardado: ${dato.fecha}.`);
+            return crearSeries(dato);
+        } catch (error) {
+            if (error.code === 'ENOENT') {
+                throw new Error(`MEM_HTML_FILE no existe: ${archivoHtml}. Guarde primero la página oficial del MEM y use su ruta real.`);
+            }
+            throw new Error(`No se pudo procesar MEM_HTML_FILE (${archivoHtml}): ${error.message}`);
+        }
+    }
+
     const proxy = process.env.MEM_PROXY_URL?.trim() || '';
     const errores = [];
     for (const url of [URL_API_MEM, URL_PAGINA_MEM]) {
@@ -188,10 +211,7 @@ export async function obtenerGasolinasMem() {
                 html = json?.content?.rendered || '';
             }
             const dato = extraerPreciosMem(html);
-            return {
-                Superior: [crearDato(dato.fecha, dato.precios.Superior, 'Superior', dato.tipo_cambio)],
-                Regular: [crearDato(dato.fecha, dato.precios.Regular, 'Regular', dato.tipo_cambio)]
-            };
+            return crearSeries(dato);
         } catch (error) {
             errores.push(`${url}: ${error.message}`);
         }
