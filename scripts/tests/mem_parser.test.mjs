@@ -22,6 +22,25 @@ assert.deepEqual(actual, {
     tipo_cambio: 7.663
 });
 
+const html28Septiembre = `
+<h4>Modalidad: autoservicio</h4>
+<table><tr><th>Producto</th><th>Precios Monitoreados 21/09/2026</th><th>Precios Monitoreados 28/09/2026</th><th>Diferencia</th></tr>
+<tr><td>Gasolina Superior</td><td>Q44.61</td><td>Q45.29</td><td>Q0.68</td></tr>
+<tr><td>Gasolina Regular</td><td>Q42.58</td><td>Q43.26</td><td>Q0.68</td></tr>
+<tr><td>Combustible Diesel</td><td>Q49.40</td><td>Q49.37</td><td>-Q0.03</td></tr>
+<tr><td>Kerosene</td><td>Q55.00</td><td>Q55.00</td><td>Q0.00</td></tr></table>
+<p>Tipo de cambio del día: Q7.663</p>
+<h4>Modalidad: servicio completo</h4>
+<table><tr><th>Producto</th><th>Precios Monitoreados 21/09/2026</th><th>Precios Monitoreados 28/09/2026</th></tr>
+<tr><td>Gasolina Superior</td><td>Q45.74</td><td>Q46.29</td></tr>
+<tr><td>Gasolina Regular</td><td>Q43.66</td><td>Q44.23</td></tr></table>`;
+
+assert.deepEqual(extraerPreciosMem(html28Septiembre), {
+    fecha: '2026-09-28',
+    precios: { Superior: 45.29, Regular: 43.26 },
+    tipo_cambio: 7.663
+});
+
 const htmlAnterior = `
 <h4>Autoservicio</h4><table>
 <tr><th>Producto</th><th>Monitoreo Anterior: 28 de octubre de 2024</th><th>Monitoreo Actual: 4 de noviembre de 2024</th></tr>
@@ -50,4 +69,3 @@ try {
 }
 
 console.log('Parser MEM: pruebas superadas.');
-

@@ -1,0 +1,294 @@
+\documentclass[11pt,letterpaper]{article}
+
+% Permite compilar este archivo de forma aislada en el editor nativo. En
+% Overleaf, el archivo referencias.bib incluido en esta carpeta contiene la
+% misma bibliografía y filecontents no lo sobrescribe.
+\begin{filecontents*}{referencias.bib}
+@online{memPrecios2026, author={{Ministerio de Energía y Minas de Guatemala}}, title={Precios de combustible nacionales}, year={2026}, url={https://mem.gob.gt/que-hacemos/hidrocarburos/comercializacion-downstream/precios-combustible-nacionales/}, urldate={2026-09-28}}
+@online{memEstructura2026, author={{Ministerio de Energía y Minas de Guatemala}}, title={Estructura de precios en Ciudad de Guatemala: vigencia del 12 al 15 de marzo de 2026}, year={2026}, url={https://mem.gob.gt/wp-content/uploads/2026/03/Estructura-Porcentual-de-Precios-2026-03-12.pdf}, urldate={2026-09-28}}
+@online{memDeterminacion2021, author={{Ministerio de Energía y Minas de Guatemala}}, title={¿Cómo se determinan los precios de los combustibles en Guatemala?}, year={2021}, url={https://mem.gob.gt/como-se-determinan-los-precios-de-los-combustibles-en-guatemala/}, urldate={2026-09-28}}
+@online{memSeguimiento2026, author={{Ministerio de Energía y Minas de Guatemala}}, title={Seguimiento permanente de los precios de combustible a nivel nacional}, year={2026}, url={https://mem.gob.gt/seguimiento-permanente-de-los-precios-de-combustible-a-nivel-nacional/}, urldate={2026-09-28}}
+@online{memFactores2026, author={{Ministerio de Energía y Minas de Guatemala}}, title={Factores internacionales afectan alza en precios nacionales}, year={2026}, url={https://mem.gob.gt/factores-internacionales-afectan-alza-en-precios-nacionales/}, urldate={2026-09-28}}
+@online{memLatam2026, author={{Ministerio de Energía y Minas de Guatemala}}, title={Los precios de los combustibles en América Latina reflejan las políticas energéticas y fiscales de cada país}, year={2026}, url={https://mem.gob.gt/los-precios-de-los-combustibles-en-america-latina-reflejan-las-politicas-energeticas-y-fiscales-de-cada-pais/}, urldate={2026-09-28}}
+@online{memAcuerdo1452022, author={{Ministerio de Energía y Minas de Guatemala}}, title={Acuerdo Ministerial 145-2022: metodología de precios máximos de referencia}, year={2022}, url={https://mem.gob.gt/wp-content/uploads/2022/05/Acuerdo-Ministerial-145-2022.pdf}, urldate={2026-09-28}}
+@online{congresoComercializacion1997, author={{Congreso de la República de Guatemala}}, title={Decreto Número 109-97, Ley de Comercialización de Hidrocarburos}, year={1997}, url={https://mem.gob.gt/wp-content/uploads/2021/05/Decreto-109-97-Ley-de-Comercializacion-de-Hidrocarburos-y-Acuerdo-Gubernativo-522-99-Reglamento.pdf}, urldate={2026-09-28}}
+@online{memReglamento5221999, author={{Presidencia de la República de Guatemala}}, title={Acuerdo Gubernativo Número 522-99, Reglamento de la Ley de Comercialización de Hidrocarburos}, year={1999}, url={https://mem.gob.gt/wp-content/uploads/2021/05/Decreto-109-97-Ley-de-Comercializacion-de-Hidrocarburos-y-Acuerdo-Gubernativo-522-99-Reglamento.pdf}, urldate={2026-09-28}}
+@online{congresoIDP1998, author={{Congreso de la República de Guatemala}}, title={Decreto Número 38-92 y sus reformas: Ley del Impuesto a la Distribución de Petróleo Crudo y Combustibles Derivados del Petróleo}, year={1992}, url={https://portal.sat.gob.gt/portal/leyes-y-reglamentos/}, urldate={2026-09-28}}
+@online{congresoIVA1992, author={{Congreso de la República de Guatemala}}, title={Decreto Número 27-92, Ley del Impuesto al Valor Agregado}, year={1992}, url={https://portal.sat.gob.gt/portal/leyes-y-reglamentos/}, urldate={2026-09-28}}
+@online{congresoApoyo2026, author={{Congreso de la República de Guatemala}}, title={Congreso escucha a la población y aprueba apoyo al precio de los combustibles}, year={2026}, url={https://www.congreso.gob.gt/noticias_congreso/15748/2026/}, urldate={2026-09-28}}
+@online{congresoSubsidio2026, author={{Congreso de la República de Guatemala}}, title={Inicia subsidio al combustible que durará hasta julio}, year={2026}, url={https://www.congreso.gob.gt/noticias_congreso/15918/2026/}, urldate={2026-09-28}}
+@online{diacoEspeculacion2020, author={{Dirección de Atención y Asistencia al Consumidor}}, title={DIACO presenta denuncias en el Ministerio Público por especulación de precios en combustibles}, year={2020}, url={https://diaco.gob.gt/diaco-presenta-denuncias-en-el-ministerio-de-publico-por-especulacion-de-precios-en-combustibles/}, urldate={2026-09-28}}
+@online{diacoCentinela2017, author={{Dirección de Atención y Asistencia al Consumidor}}, title={Se activa Plan Centinela por precios de combustibles}, year={2017}, url={https://diaco.gob.gt/se-activa-plan-centinela-por-precios-de-combustibles/}, urldate={2026-09-28}}
+@online{eiaApi2026, author={{U.S. Energy Information Administration}}, title={Petroleum and other liquids: spot prices, WTI Cushing (RWTC)}, year={2026}, url={https://api.eia.gov/v2/petroleum/pri/spt/data/}, urldate={2026-09-28}}
+@online{fredGasolinaGulf2026, author={{Federal Reserve Bank of St. Louis}}, title={Conventional Gasoline Prices: U.S. Gulf Coast, Regular (WGASUSGULF)}, year={2026}, url={https://fred.stlouisfed.org/series/WGASUSGULF}, urldate={2026-09-28}}
+@online{banguatTipoCambio2026, author={{Banco de Guatemala}}, title={Tipo de cambio: servicios web}, year={2026}, url={https://banguat.gob.gt/tipo_cambio/TipoCambio/OtrosServicios}, urldate={2026-09-28}}
+@online{worldBankPinkSheet2026, author={{World Bank}}, title={Commodity Markets: Pink Sheet data}, year={2026}, url={https://www.worldbank.org/en/research/commodity-markets}, urldate={2026-09-28}}
+\end{filecontents*}
+
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\addbibresource{referencias.bib}
+
+\geometry{margin=2.45cm}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue,pdftitle={GasolinaComparador: precios de combustibles en Guatemala y referencias internacionales}}
+\sisetup{output-decimal-marker={.},group-separator={,}}
+\setlist[itemize]{noitemsep,topsep=3pt}
+\renewcommand{\arraystretch}{1.18}
+
+\title{\textbf{GasolinaComparador}\\[0.35cm]\Large Análisis técnico de los precios de combustibles en Guatemala y su relación con referencias internacionales}
+\author{Informe metodológico basado en el estado del repositorio}
+\date{Fecha de corte de datos: 22 de septiembre de 2026\\Fecha de consulta de fuentes: 28 de septiembre de 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+Este informe documenta qué miden las gráficas de \emph{GasolinaComparador}, evalúa la asociación estadística entre sus precios de gasolina y el WTI, y sitúa esa comparación dentro de la formación real del precio en Guatemala. El repositorio contiene 3,760 observaciones diarias de gasolina superior y regular del monitoreo del Ministerio de Energía y Minas (MEM), desde el 8 de febrero de 2013 hasta el 22 de septiembre de 2026; una serie diaria de WTI de la U.S. Energy Information Administration (EIA); y tipo de cambio del Banco de Guatemala (Banguat). No contiene una serie de diésel ni un precio internacional de gasolina o diésel refinado.
+
+En niveles, las correlaciones de Pearson son altas (0.912 para superior y 0.911 para regular), pero ese resultado mezcla tendencias de largo plazo. Al trabajar con variaciones semanales, las correlaciones contemporáneas bajan a 0.125 y 0.108. El máximo entre los rezagos examinados aparece cuando el WTI antecede una semana a la gasolina: 0.343 y 0.355, respectivamente. Por tanto, los datos respaldan una asociación positiva moderada con un desfase aproximado de una semana en esta especificación; no prueban que el WTI cause el cambio ni que cada aumento se traslade automática, íntegra o inmediatamente a la estación de servicio. La referencia técnicamente más cercana para gasolinas y diésel importados es el precio del \emph{producto refinado} FOB de la Costa del Golfo de EE.\,UU. que usa el MEM en su metodología de referencia, no el barril de WTI por sí solo.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introducción}
+Guatemala es importador de combustibles derivados. El precio minorista que observa una persona no es el precio de un barril de crudo: incorpora el producto refinado, la llegada al país, impuestos y la comercialización local. El propio MEM explica que las variaciones internacionales relevantes incluyen las cotizaciones de productos refinados y que el precio interno además depende de inventarios, tipo de cambio, seguros y logística \parencite{memSeguimiento2026,memDeterminacion2021}.
+
+El sitio web del repositorio se presenta como ``Observatorio de Combustibles''. Su gráfica normaliza las dos líneas con base 100 para comparar \emph{porcentajes de cambio}, no precios en las mismas unidades: gasolina en quetzales por galón y WTI en dólares por barril. Esta decisión visual es útil para ver co-movimientos, pero no convierte WTI en el costo de importación de la gasolina guatemalteca.
+
+\section{Objetivos}
+\begin{itemize}
+  \item Describir con precisión las series que el proyecto publica y sus límites.
+  \item Evaluar, con variaciones porcentuales y rezagos, si el WTI suele anteceder los cambios de gasolina observados por el MEM.
+  \item Explicar la cadena de formación del precio y la referencia internacional más apropiada.
+  \item Distinguir la fiscalización de precios de una fijación general de precios.
+  \item Ofrecer una lectura accesible y prudente de las gráficas para usuarios no especializados.
+\end{itemize}
+
+\section{Fuentes y metodología}
+\subsection{Inventario verificable del repositorio}
+La revisión se efectuó sobre el archivo versionado \texttt{data/series\_combustibles.json} y el código \texttt{scripts/actualizar\_series.mjs}, en el estado de corte indicado en la portada. El recolector consulta la API de precios del MEM, la serie EIA \texttt{RWTC} y el servicio SOAP de tipo de cambio de Banguat. El navegador alinea cada fecha de gasolina con el último WTI disponible en esa fecha o antes; para el control de desfase resta 0, 7, 14 o 21 días al WTI antes de emparejarlo. Este detalle importa: no se interpolan precios del WTI para fines de semana o feriados.
+
+\begin{longtable}{p{0.20\textwidth}p{0.24\textwidth}p{0.13\textwidth}p{0.12\textwidth}p{0.18\textwidth}}
+\caption{Fuentes de datos}\label{tab:fuentes}\\
+\toprule
+Fuente & Variable & Frecuencia & Unidad & Período disponible y uso \\
+\midrule
+\endfirsthead
+\toprule
+Fuente & Variable & Frecuencia & Unidad & Período disponible y uso \\
+\midrule
+\endhead
+MEM, monitoreo de precios nacionales & Gasolina superior y regular, promedio monitoreado de autoservicio & Diaria en el archivo & Q/galón & 2013-02-08 a 2026-09-22; serie local de consumo \parencite{memPrecios2026} \\
+EIA, serie RWTC & WTI spot en Cushing, Oklahoma & Diaria hábil & USD/barril & 2013-01-02 a 2026-09-22; indicador internacional actual del proyecto \parencite{eiaApi2026} \\
+Banguat & Tipo de cambio de referencia & Diaria hábil & Q/USD & 2013-01-01 a 2026-09-28; contexto cambiario, no se incorpora al cálculo de la gráfica \parencite{banguatTipoCambio2026} \\
+MEM, estructura porcentual & CIF, terminal, márgenes, impuestos y flete & Documento puntual & Q/galón & 2026-03-12 a 2026-03-15; composición de referencia, no desglose actual \parencite{memEstructura2026} \\
+FRED/EIA & Gasolina convencional regular US Gulf Coast & Semanal & USD/galón & Alternativa pública para producto refinado; útil para robustez \parencite{fredGasolinaGulf2026} \\
+\bottomrule
+\end{longtable}
+
+\subsection{Qué representa cada serie}
+\begin{itemize}
+  \item \textbf{Superior y regular}: precio promedio monitoreado por el MEM. Son precios de venta, no cotizaciones de importación, ni los precios de una estación específica. El proyecto conserva también una estimación de precio sin IVA ni IDP; se obtiene como precio publicado menos IDP e IVA calculado al 12\% sobre la base gravable.
+  \item \textbf{WTI}: precio spot del crudo West Texas Intermediate en Cushing, Oklahoma. Es una referencia mundial de crudo, medida en USD por barril; no es gasolina ni diésel, ni cotización CIF de Guatemala \parencite{eiaApi2026}.
+  \item \textbf{Tipo de cambio}: tipo de cambio de referencia Q/USD publicado por Banguat. Está disponible en el JSON, aunque la gráfica principal no lo ajusta ni lo incorpora al índice \parencite{banguatTipoCambio2026}.
+\end{itemize}
+
+La página no carga una serie de diésel. El MEM sí publica diésel en sus comparaciones semanales ---por ejemplo, Q49.40/galón en autoservicio del área metropolitana el 21 de septiembre de 2026---, pero esa observación no sustituye una serie histórica homogénea en el repositorio \parencite{memPrecios2026}. En consecuencia, este documento \textbf{no inventa resultados estadísticos para diésel}; recomienda incorporarlo antes de afirmar que la gráfica lo analiza.
+
+\subsection{Cálculos reproducibles}
+Para una serie de precios $P_t$, la variación semanal usada en el análisis es:
+\begin{equation}
+ r_t^{(7)} = 100\left(\frac{P_t}{P_{t-7}}-1\right).
+\end{equation}
+Para cada rezago $k\in\{0,1,2,3,4\}$, se calcula la correlación de Pearson entre $r^{(7)}_{\text{gasolina},t}$ y $r^{(7)}_{\text{WTI},t-7k}$. Así, $k=1$ pregunta si un cambio semanal de WTI ocurrido la semana anterior se asocia con el cambio actual de gasolina. Solo se conservan pares con observaciones válidas; resultan 3,685 pares para cada combustible.
+
+La correlación de Pearson se calcula como:
+\begin{equation}
+ \rho_{X,Y}=\frac{\sum_{t=1}^n(X_t-\bar X)(Y_t-\bar Y)}{\sqrt{\sum_{t=1}^n(X_t-\bar X)^2}\sqrt{\sum_{t=1}^n(Y_t-\bar Y)^2}}.
+\end{equation}
+No se estima una ecuación causal ni se controla por todos los determinantes del precio. Por ello, correlación no implica causalidad.
+
+\section{Formación del precio de los combustibles en Guatemala}
+\subsection{De crudo a precio en surtidor}
+El \textbf{petróleo crudo} es la materia prima que una refinería procesa. La \textbf{gasolina} y el \textbf{diésel} son productos refinados con mercados, especificaciones, inventarios y márgenes de refinación propios. Una subida del crudo puede aumentar el costo esperado de esos productos, pero su precio también varía por capacidad de refinerías, temporada, calidad, mezclas y existencias.
+
+\textbf{FOB} (\emph{free on board}) es el precio del producto puesto a bordo en el puerto de salida; no incluye el flete ni el seguro marítimo posteriores. \textbf{CIF} (\emph{cost, insurance and freight}) añade costo, seguro y flete hasta el puerto de destino. A partir de CIF aún faltan costos portuarios y de terminal, almacenamiento, el margen del importador, impuestos, traslado terrestre y margen de la estación.
+
+De forma esquemática, para un galón vendido al público:
+\begin{align}
+ P_{final}={}&P_{CIF}+C_{puerto/terminal}+M_{importador}+IDP\\
+ &+IVA+F_{terrestre}+M_{expendedor}.
+\end{align}
+Esta identidad es contable; no afirma que cada componente sea constante ni que tenga una sola tarifa para todo el país.
+
+La última estructura oficial versionada por el proyecto corresponde a Ciudad de Guatemala, autoservicio, del 12 al 15 de marzo de 2026. Es una referencia puntual y no debe proyectarse como un desglose contable para septiembre ni para cada estación.
+
+\begin{table}[htbp]
+\centering
+\caption{Estructura de referencia del MEM: marzo de 2026 (Q/galón)}
+\label{tab:estructura}
+\begin{tabular}{lrr}
+\toprule
+Componente & Superior & Regular \\
+\midrule
+Precio CIF & 21.62 & 20.82 \\
+Puerto y terminal & 0.30 & 0.30 \\
+Margen importador & 2.00 & 2.00 \\
+IDP & 4.70 & 4.60 \\
+IVA & 3.14 & 3.04 \\
+Flete terrestre & 0.40 & 0.40 \\
+Margen expendedor & 1.832 & 1.832 \\
+\midrule
+Total & 33.99 & 32.99 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize Fuente: estructura porcentual del MEM, vigencia indicada; elaboración propia a partir del documento. \parencite{memEstructura2026}
+\end{table}
+
+El IDP es un impuesto específico por galón bajo la Ley del Impuesto a la Distribución de Petróleo Crudo y Combustibles Derivados del Petróleo; el IVA general es 12\%. Ambos forman parte del precio final y reducen la proporción que puede variar inmediatamente con el producto importado \parencite{congresoIDP1998,congresoIVA1992}. El tipo de cambio también importa: una compra internacional cotizada en USD se expresa en quetzales. Durante el período completo del archivo, el tipo de cambio de referencia pasó de Q7.90230/USD a Q7.63147/USD (-3.43\%); ese cambio acumulado no explica por sí solo los movimientos de combustible, pero omitirlo sería metodológicamente incompleto.
+
+\section{Relación entre petróleo y productos refinados}
+WTI es una señal útil de costos energéticos globales, pero es un \emph{proxy} indirecto. La comparación WTI--gasolina nacional mezcla al menos tres transformaciones: crudo a producto refinado, FOB a CIF y costo importado a venta minorista. Por eso, comparar directamente Q/galón con USD/barril solo tiene sentido tras normalizar o convertir unidades; aun así, se compara una relación económica indirecta.
+
+Para medidas extraordinarias, la evidencia oficial disponible muestra una metodología más cercana al producto refinado: el Acuerdo Ministerial 145-2022 utilizó precios FOB internacionales promedio de los cinco días previos, con tipo de cambio Banguat; para gasolinas consideró \emph{87 Unleaded Waterborne} de Platts con un ajuste para superior y para diésel ULSD Waterborne con una penalización técnica \parencite{memAcuerdo1452022}. La publicación actual del MEM también identifica las cotizaciones de la Costa del Golfo de Estados Unidos como un factor de referencia \parencite{memLatam2026}. Esto no prueba que la fórmula de 2022 sea una regla permanente, pero sí documenta que el indicador oficial de referencia no se limita al WTI.
+
+\subsection{Indicador internacional apropiado}
+La siguiente jerarquía es recomendable:
+\begin{enumerate}
+  \item \textbf{Preferido para la validación regulatoria:} cotización Platts/S\&P Global de gasolina o ULSD Waterborne/US Gulf Coast, con los ajustes y días de promedio que establezca la norma aplicable. Es la referencia más cercana al producto comprado, aunque sus series detalladas suelen ser de pago.
+  \item \textbf{Preferido para análisis público reproducible:} gasolina convencional regular US Gulf Coast de EIA/FRED para gasolina; y una serie EIA/FRED de diésel o destilado Gulf Coast compatible para diésel. Tiene la ventaja de ser pública, en USD/galón y de frecuencia semanal; la limitación es que no reproduce exactamente la calidad, contrato, puerto ni ajuste Platts de Guatemala \parencite{fredGasolinaGulf2026}.
+  \item \textbf{Complemento de importación:} precio FOB y volumen por buque publicado por el MEM, y precio CIF de sus estructuras. Es lo más cercano a importaciones observadas, pero no necesariamente crea una serie diaria uniforme o inmediatamente disponible \parencite{memPrecios2026}.
+  \item \textbf{Indicadores de contexto:} WTI, Brent o el promedio de crudos del Banco Mundial. Son amplios, gratuitos y útiles para explicar el entorno, pero son menos adecuados para cuantificar el traslado a gasolina o diésel \parencite{eiaApi2026,worldBankPinkSheet2026}.
+\end{enumerate}
+
+\section{Análisis de los datos del proyecto}
+\subsection{Resultados descriptivos}
+La tabla \ref{tab:descriptivo} reporta cálculos propios sobre el JSON. El aumento acumulado de gasolina entre extremos no debe leerse como efecto de un único factor: corresponde a más de trece años y coexistieron impuestos, inventarios, cambios de producto y políticas temporales.
+
+\begin{table}[htbp]
+\centering
+\caption{Extremos y variación acumulada de las series del repositorio}
+\label{tab:descriptivo}
+\begin{tabular}{lrrr}
+\toprule
+Serie & Inicio & Fin & Variación \\
+\midrule
+Gasolina superior & Q34.08 (2013-02-08) & Q44.61 (2026-09-22) & +30.90\% \\
+Gasolina regular & Q32.67 (2013-02-08) & Q42.58 (2026-09-22) & +30.33\% \\
+WTI & USD95.71 (2013-02-08) & USD96.41 (2026-09-22) & +0.73\% \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize Fuente: cálculos propios con \texttt{series\_combustibles.json}; WTI se toma en o antes de cada fecha de gasolina.
+\end{table}
+
+En el último año del archivo (22 de septiembre de 2025 a 22 de septiembre de 2026), superior subió de Q29.94 a Q44.61 (+49.00\%), regular de Q28.45 a Q42.58 (+49.67\%) y WTI de USD62.99 a USD96.41 (+53.06\%). Las direcciones son coincidentes en ese tramo, pero el cambio de WTI es mayor y las fechas puntuales no establecen qué parte fue refinación, logística, producto, margen, impuestos o política pública.
+
+Hay divergencias visibles en horizontes largos: entre los extremos del archivo, WTI termina casi en su nivel inicial (+0.73\%), mientras ambas gasolinas terminan cerca de 30\% arriba. Ello es coherente con componentes que no siguen el WTI uno a uno, pero no permite asignar una causa sin información adicional. También pueden aparecer separaciones de corto plazo porque el sitio compara un producto final con un crudo y porque el precio observado puede cambiar por bloques cuando se renueva inventario o llega una importación.
+
+\section{Análisis estadístico}
+\subsection{Correlaciones de niveles}
+Al aplicar exactamente el emparejamiento de la gráfica a 3,760 pares, la correlación de niveles es 0.9123 para superior y 0.9114 para regular con WTI sin desfase. Al mover WTI siete días hacia atrás, pasa a 0.9152 y 0.9147. Es una asociación lineal alta de \emph{niveles}, pero tiene una debilidad conocida: dos series con tendencias, persistencia temporal y choques comunes pueden correlacionarse aun sin una relación causal proporcional. Por eso no basta para probar la hipótesis.
+
+\subsection{Variaciones semanales y rezagos}
+La tabla \ref{tab:rezagos} es la prueba central solicitada. Se comparan cambios porcentuales de siete días, no precios nominales. Los valores positivos indican que cambios de WTI y gasolina tienden a compartir dirección; no indican cuántos quetzales se trasladan ni una causalidad.
+
+\begin{table}[htbp]
+\centering
+\caption{Correlación de Pearson de variaciones semanales; WTI antecede $k$ semanas}
+\label{tab:rezagos}
+\begin{tabular}{lrrrrr}
+\toprule
+Combustible & $k=0$ & $k=1$ & $k=2$ & $k=3$ & $k=4$ \\
+\midrule
+Superior & 0.1248 & \textbf{0.3426} & 0.2509 & 0.1017 & 0.0613 \\
+Regular & 0.1075 & \textbf{0.3548} & 0.2400 & 0.0799 & 0.0887 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize Fuente: cálculos propios. $n=3{,}685$ pares por celda; retorno de siete días y observación WTI disponible en o antes de la fecha requerida.
+\end{table}
+
+\paragraph{Interpretación.} La relación contemporánea es débil. El mayor valor se obtiene con un retraso de una semana y es moderado, no determinista. A dos semanas sigue siendo positivo y menor; a tres y cuatro semanas se debilita. Con esta definición y este período, es razonable afirmar que los cambios de WTI \emph{tienden} a anteceder parte de las variaciones locales aproximadamente una semana. No es razonable afirmar que todo aumento de WTI se traslada en una semana, que la magnitud es igual, o que WTI sea la única causa.
+
+\paragraph{Hipótesis evaluada.} La proposición ``cuando aumenta el precio internacional del petróleo o sus derivados, aumenta el combustible en Guatemala'' recibe apoyo parcial si se formula como asociación promedio y con desfase. Queda insuficientemente probada si se formula como regla inmediata, exacta o causal. El análisis es aún más limitado porque el proyecto no tiene la cotización internacional del \emph{derivado}; reemplazar WTI por una serie de gasolina/ULSD Gulf Coast es la siguiente mejora metodológica.
+
+\section{Factores que afectan el precio}
+La diferencia de tiempo y porcentaje entre una cotización internacional y una estación puede obedecer a:
+\begin{itemize}
+  \item el precio internacional del producto refinado y su margen de refinación, que no necesariamente replica WTI;
+  \item tipo de cambio Q/USD, flete marítimo, seguro, rutas, Canal de Panamá, costos portuarios y terminales;
+  \item inventarios adquiridos a precios anteriores, calendario de llegada, almacenamiento y rotación de producto;
+  \item flete terrestre, cobertura geográfica, competencia local y márgenes de importador y expendedor;
+  \item IDP e IVA, que cambian la proporción del precio final expuesta al mercado internacional;
+  \item oferta y demanda global, decisiones de OPEP/OPEP+, capacidad de refinación, conflictos, sanciones y disrupciones logísticas;
+  \item políticas públicas temporales. En 2026 el MEM informó que tensiones geopolíticas, fletes, seguros, rutas y atrasos portuarios afectaban precios CIF; estos son mecanismos plausibles de divergencia respecto al crudo \parencite{memFactores2026}.
+\end{itemize}
+
+\section{Fiscalización y políticas públicas en Guatemala}
+\subsection{Régimen ordinario}
+El Decreto 109-97 promueve la libre comercialización y la competencia en la cadena de hidrocarburos; su reglamento, Acuerdo Gubernativo 522-99, asigna al MEM por medio de la Dirección General de Hidrocarburos (DGH) funciones de fiscalización, abastecimiento y aplicación de la ley \parencite{congresoComercializacion1997,memReglamento5221999}. Por tanto, el régimen ordinario es de precios libres: el Estado no fija de manera permanente el precio de cada bomba. La libertad de precios no elimina las obligaciones de seguridad, calidad, volumen, información y protección al consumidor.
+
+La DGH/MEM publica precios monitoreados, informes nacionales, precios por departamento, existencias, importaciones por buque con precio FOB y volumen, y estructuras porcentuales \parencite{memPrecios2026}. Los precios de referencia sirven para que autoridades y ciudadanía contrasten el comportamiento observado y evalúen posibles distorsiones; no deben confundirse automáticamente con una tarifa obligatoria ordinaria. El MEM ha señalado que ante una distorsión realiza diligencias con DIACO y SAT \parencite{memSeguimiento2026}.
+
+DIACO, dentro del Ministerio de Economía, protege los derechos del consumidor, verifica información y puede coordinar inspecciones (incluido el Plan Centinela). En antecedentes de fiscalización ha solicitado facturas de compra y contrastado el precio exhibido con la estructura técnica del MEM al investigar presunta especulación \parencite{diacoEspeculacion2020,diacoCentinela2017}. SAT es relevante para deberes tributarios y documentación fiscal. Dependiendo del hallazgo, las consecuencias pueden venir de la legislación de hidrocarburos, protección al consumidor, tributaria o penal; este informe no presume una infracción a partir de una diferencia gráfica.
+
+\subsection{Medida extraordinaria identificada en 2026}
+La Ley de Apoyo de Emergencia para los Consumidores de Diésel y Gasolinas, Decreto 11-2026, aprobó un apoyo temporal por tres meses: Q8 por galón de diésel y Q5 por galón de gasolina superior o regular. El Congreso informó inicio el 1 de mayo de 2026 y duración hasta julio; MEM era ente rector, y DIACO debía velar por el traslado al consumidor \parencite{congresoApoyo2026,congresoSubsidio2026}. A la fecha de consulta (28 de septiembre de 2026), esa vigencia de tres meses ya terminó. Es indispensable separarla del régimen permanente: no convierte el mercado ordinario en uno de precios máximos generales ni debe omitirse en análisis del período mayo--julio de 2026.
+
+\section{Interpretación de las gráficas de GasolinaComparador}
+\begin{itemize}
+  \item \textbf{Cada línea}: la amarilla representa gasolina superior o regular seleccionada; la verde, WTI. Ambas comienzan en índice 100 dentro del período elegido. No son Q/galón contra USD/barril en el mismo eje.
+  \item \textbf{Si ambas suben}: ambas aumentaron respecto al inicio del período. Es evidencia visual de co-movimiento, no prueba de una causa única.
+  \item \textbf{Si ambas bajan}: ambas redujeron su valor relativo; el porcentaje puede ser diferente.
+  \item \textbf{Si se separan}: una puede estar afectada por derivados refinados, inventario, flete, tipo de cambio, impuestos, márgenes, logística o una medida temporal. No es por sí mismo prueba de abuso ni de error.
+  \item \textbf{Por qué puede tardar}: el combustible vendido hoy pudo comprarse, embarcarse, almacenarse y transportarse antes del cambio de WTI. Además, el precio relevante de compra suele ser un derivado refinado y no el crudo.
+  \item \textbf{Por qué no cambia el mismo porcentaje}: IDP, IVA y costos/márgenes locales hacen que solo una parte del precio final se mueva con el componente internacional; a la vez, el margen de refinación y los fletes pueden amplificar o compensar el cambio de crudo.
+\end{itemize}
+
+La gráfica ``sin impuestos'' mejora la comparación al retirar IVA e IDP según la fórmula del sitio, pero sigue incluyendo CIF, terminal, transporte y márgenes. Tampoco equivale a una observación de precio FOB internacional ni a una medida de ganancia.
+
+\section{Limitaciones del análisis}
+\begin{itemize}
+  \item El análisis cubre superior y regular; falta una serie histórica de diésel en el repositorio.
+  \item WTI es crudo en Cushing y no una cotización de gasolina/diésel importado a Guatemala. La conclusión sobre el producto refinado es conceptual y normativa, no una estimación con una serie Platts del proyecto.
+  \item La serie del MEM representa un promedio monitoreado y no identifica cada importación, inventario, estación o margen efectivo.
+  \item Los precios repetidos en días sin cambio y el uso del último WTI disponible son decisiones correctas para dibujar una gráfica diaria, pero pueden afectar la dependencia temporal de las pruebas.
+  \item Correlación no controla por impuestos, subsidio temporal, fletes, tipo de cambio, inventarios, oferta, conflictos ni cambios regulatorios. No permite concluir causalidad, abuso, colusión o una elasticidad estructural.
+  \item La estructura de marzo de 2026 es una fotografía de referencia de cuatro días; reutilizarla proporcionalmente en otra fecha, como hace el sitio, debe etiquetarse como estimación orientativa.
+\end{itemize}
+
+\section{Conclusiones}
+\begin{enumerate}
+  \item La gráfica actual documenta una asociación visual entre gasolina guatemalteca y WTI, pero compara unidades y etapas distintas de la cadena. La normalización soluciona la escala, no la diferencia económica entre crudo y combustible refinado.
+  \item Los cálculos sobre variaciones semanales muestran que el vínculo contemporáneo es débil y que la asociación máxima observada ocurre cuando WTI antecede una semana. Esto es consistente con un desfase, no con una transmisión instantánea.
+  \item El precio de referencia internacional técnicamente más apropiado es el de gasolina o ULSD refinado en la Costa del Golfo/Waterborne, idealmente la cotización Platts aplicada por la metodología pertinente. WTI debe conservarse como indicador de contexto.
+  \item Guatemala opera ordinariamente con precios libres y vigilancia, no con una fijación permanente general. MEM/DGH monitorea y publica referencias; DIACO, SAT y otras autoridades pueden intervenir dentro de sus competencias ante anomalías o incumplimientos.
+  \item El apoyo de 2026 fue temporal (mayo--julio) y debe tratarse como intervención extraordinaria en cualquier análisis del período, no como un componente permanente.
+\end{enumerate}
+
+\section{Recomendaciones para el repositorio}
+\begin{enumerate}
+  \item Incorporar una serie histórica de diésel del MEM y documentar su misma modalidad y cobertura geográfica.
+  \item Añadir una serie pública de gasolina US Gulf Coast y, para diésel, una de ULSD/destilado equivalente; exhibir WTI como contexto separado.
+  \item Publicar junto a la gráfica una tabla de correlaciones de retornos y rezagos, con período, número de pares y advertencia de no causalidad.
+  \item Marcar en la serie los períodos de apoyo temporal y no reinterpretar el desglose porcentual como contabilidad vigente.
+  \item Conservar la fecha específica de cada fuente y enlazar el archivo original del MEM para auditoría.
+\end{enumerate}
+
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}
